@@ -1,0 +1,40 @@
+# Obsidian
+.obsidian/workspace.json
+.obsidian/graph.json
+.obsidian/backlink.json
+.obsidian/canvas.json
+.obsidian/workspace-mobile.json
+
+# OS
+.DS_Store
+Thumbs.db
+.Trash-*
+
+# Video
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.webm
+
+# Audio
+*.mp3
+*.wav
+*.flac
+*.ogg
+*.m4a
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+*.webp
+
+# PDFs
+*.pdf
+
+# Misc
+*.tmp
