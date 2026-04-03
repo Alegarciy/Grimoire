@@ -38,3 +38,6 @@ Thumbs.db
 
 # Misc
 *.tmp
+
+# Beyond the Depths of Knowledge
+./Spellbook/Databricks_Bootcamp/*
