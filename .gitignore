@@ -40,4 +40,4 @@ Thumbs.db
 *.tmp
 
 # Beyond the Depths of Knowledge
-./Spellbook/Databricks_Bootcamp/*
+Spellbook/Databricks_Bootcamp/
