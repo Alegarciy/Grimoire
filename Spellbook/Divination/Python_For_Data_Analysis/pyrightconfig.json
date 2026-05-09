@@ -1,0 +1,5 @@
+{
+  "include": ["."],
+  "venvPath": "/home/gandalf/Documents/Chamber_of_Scretes/Intro_ML",
+  "venv": ".venv"
+}
