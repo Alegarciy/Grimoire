@@ -43,6 +43,8 @@ With the async/await language feature, increasing the number of concurrent opera
 
 ## Chapter 02: Setup of Tokio Spells
 
+### The Mini-Redis Journey
+
 Prolog:
 ```text
 This tutorial will take you step by step through the process of building a Redis client and server. We will start with the basics of asynchronous programming with Rust and build up from there. We will implement a subset of Redis commands but will get a comprehensive tour of Tokio.
@@ -78,4 +80,27 @@ OpenTelemetry builds upon years of experience from the OpenTracing and OpenCensu
 ~ I wonder what is necessary open telemetry... (the mage asks himself)
 ~ I know! I will ask Golem, my trusty companion to answer my question.
 ~ Golem tell me about: [[Open Telemetry]]
+
+The Wizard has achieved to run some commands and communicate with the `mini-redis` server:
+```javascript
+mini-redis master  ❯ cargo run --bin mini-redis-cli set foo bar
+   Compiling mini-redis v0.4.1 (/home/gandalf/Documents/Quests/SSH_Arcane/mini-redis)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.53s
+     Running `target/debug/mini-redis-cli set foo bar`
+OK
+
+mini-redis master  ❯ cargo run --bin mini-redis-cli ping
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.03s
+     Running `target/debug/mini-redis-cli ping`
+"PONG"
+
+mini-redis master  ❯ cargo run --bin mini-redis-cli get foo
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running `target/debug/mini-redis-cli get foo`
+"bar"
+```
+
+Now the exploration becomes serious the Wizard is unable to read the magic without the `RUST` syntax book. He asks Golem to open his knowledge vault to gather insights to start casting speels.
+
+~ Golem create the [[Rust Async Server Spellbook]]
 
