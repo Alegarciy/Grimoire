@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Quests/Forbidden Magic Rust/Levels/LOGS.md",
+                "file": "Quests/Forbidden Magic Rust/Levels/Level1/GOLEM/Guessing_Game.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "LOGS"
+              "title": "Guessing_Game"
             }
           }
         ]
@@ -33,12 +33,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Quests/Forbidden Magic Rust/Levels/REASEARCH.md",
+                "file": "Quests/Forbidden Magic Rust/Levels/Level1/GOLEM/Variables and Mutability.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "REASEARCH"
+              "title": "Variables and Mutability"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Quests/Forbidden Magic Rust/Levels/README.md",
+                "file": "Quests/Forbidden Magic Rust/Levels/Level1/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -118,8 +118,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345.5,
-    "collapsed": true
+    "width": 345.5
   },
   "right": {
     "id": "aafa14a90a6fadd6",
@@ -223,9 +222,15 @@
   },
   "active": "23995dcc479f41e4",
   "lastOpenFiles": [
-    "Quests/Forbidden Magic Rust/Levels/LOGS.md",
-    "Quests/Forbidden Magic Rust/Levels/REASEARCH.md",
-    "Quests/Forbidden Magic Rust/Levels/README.md",
+    "Quests/Forbidden Magic Rust/Levels/Level1/REASEARCH.md",
+    "Quests/Forbidden Magic Rust/Levels/Level1/GOLEM/Guessing_Game.md",
+    "Quests/Forbidden Magic Rust/Levels/Level1/LOGS.md",
+    "Quests/Forbidden Magic Rust/Levels/Level1/README.md",
+    "Quests/Forbidden Magic Rust/Levels/Level1/GOLEM/Variables and Mutability.md",
+    "Pasted image 20260524121025.png",
+    "Runes/Untitled-2026-04-04-1511.excalidraw.crswap",
+    "Quests/Forbidden Magic Rust/Levels/Level1/GOLEM",
+    "Quests/Forbidden Magic Rust/Levels/Level1",
     "Quests/Arcane SSH/README.md",
     "Quests/Arcane SSH/RESEARCH.md",
     "Quests/Arcane SSH/GOLEM/Rust Async Server Spellbook.md",

@@ -62,7 +62,7 @@ CON  — Surviving confusing async examples
 CHA  — Explaining the architecture clearly
 ```
 
-### Inventory[[LOGS]]
+### Inventory[[Quests/Arcane SSH/LOGS]]
 
 ```text
 Tokio spellbook

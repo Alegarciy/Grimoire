@@ -109,3 +109,111 @@ A brief glimpse of a variable with the same variable name but different type, th
 We create a variable named guess. But wait, doesn’t the program already have a variable named guess? It does, but helpfully Rust allows us to shadow the previous value of guess with a new one. Shadowing lets us reuse the guess variable name rather than forcing us to create two unique variables, such as guess_str and guess, for example. We’ll cover this in more detail in Chapter 3, but for now, know that this feature is often used when you want to convert a value from one type to another type.
 ```
 
+>  The import statement `use library::module::function;` brings the `function` item to the current scope from the module `module` inside the module `library`.
+
+# Chapter 3: Instantiations (Variables)
+
+The mage, had been tired of all this wonder lately about rustanceans. He had to take a long-rest, after three days of wondering about the strange formulas of such magic, he cleared his mind and on the comfort of his home, he continue reading the book of Rust. 
+
+## Variables and Mutability
+
+The third chapter of such book describe how to build instantiations:
+
+```text
+Adding `mut` also conveys intent to future readers of the code by indicating that other parts of the code will be changing this variable’s value.
+```
+
+He was surprised about the restrictive nature of this magic, by `default` things wouldn't change unless commanded to. The wizard had already use `constants` as immutable variables but for Rustaceans `constants` mean something different:
+
+```text
+Constants can be declared in any scope, including the global scope, which makes them useful for values that many parts of code need to know about.
+
+The last difference is that constants may be set only to a constant expression, not the result of a value that could only be computed at runtime.
+```
+
+The magic of **shadowing** is not something the wizard has ever encounter before. I is a dangerous magic, many mistakes can be done through abusing this magic. The only remedy is to state what happens in detail:
+
+```text
+Rustaceans say that the first variable is shadowed by the second, which means that the second variable is what the compiler will see when you use the name of the variable.
+```
+
+The following are two rules that apply to this technique:
+
++ First
+```text
+The second variable (the shadow) overshadows the first (the shadowed), taking any uses of the variable name to itself until either it itself is shadowed or the scope ends.
+```
++ Second
+```text
+We can shadow a variable by using the same variable’s name and repeating the use of the let keyword
+```
+
+>[!info] 
+>Shadowing is different from marking a variable as `mut` because we’ll get a compile-time error if we accidentally try to reassign to this variable without using the `let` keyword. By using `let`, we can perform a few transformations on a value but have the variable be immutable after those transformations have completed.
+
+## Data Types
+
+A voice whispers through the bool:
+~ Keep in mind that Rust is a _statically typed_ language, which means that it must know the types of all variables at compile time.
+
+His minds wonders, and recalls that compilation time is when the binary file i being created. He also links this knowledge with the [[#Chapter 1 Prolog]] and the `cargo --biary`. He also recalled the [[Guessing_Game#Rune I — ` ` The Path Separator | Module Golem Conversation]]. And then he begins understanding...
+
+### Scalar Types
+
+There are four scalar types: integers, floating-points, booleans and characters.
+
+|**Length**|**Signed (i)**|**Unsigned (u)**|**Range Formula (for n bits)**|
+|---|---|---|---|
+|**8-bit**|`i8` (-128 to 127)|`u8` (0 to 255)||
+|**16-bit**|`i16` (~32k)|`u16` (~65k)||
+|**32-bit**|`i32` (~2.1B)|`u32` (~4.2B)|**Unsigned:** 0 to $2^n - 1$|
+|**64-bit**|`i64` (9 quintillion)|`u64` (18 quintillion)||
+|**128-bit**|`i128`|`u128`|**Signed:** -$2^{n-1}$ to $2^{n-1} - 1$|
+|**Arch**|`isize`|`usize`|Target CPU dependent (32 or 64-bit)|
+
+> **Wisdom:** Use `i32` as your default integer type in Rust unless you have a specific reason (like array indexing, which requires `usize`) to use another.
+
+### Writing Literals
+As many numeric basis exist in the world of us, the representations on rust of the world are also extensive:
+
+| Number literals  | Example       |
+| ---------------- | ------------- |
+| Decimal          | `98_222`      |
+| Hex              | `0xff`        |
+| Octal            | `0o77`        |
+| Binary           | `0b1111_0000` |
+| Byte (`u8` only) | `b'A'`        |
+
+>[!Error] Failed to Cast: Integer Overflow
+>When a mage scroll have a variable of type `u8` that can hold values between 0 and 255. If you try to change the variable to a value outside that range, such as 256, _integer overflow_ will occur, which can result in one of two behaviors. When you’re compiling in debug mode, Rust includes checks for integer overflow that cause your program to _panic_ at runtime if this behavior occurs.
+
+### Floating Types
+Remember that mages also need precision floating types:
+
+| **Type** | **Size** | **Precision**                            | **Standard** | **Usage Default**                                                                     |
+| -------- | -------- | ---------------------------------------- | ------------ | ------------------------------------------------------------------------------------- |
+| `f32`    | 32-bit   | Single precision (~7 decimal digits)     | IEEE-754     | Use when memory is tight or for specialized hardware/3D graphics.                     |
+| `f64`    | 64-bit   | Double precision (~15-17 decimal digits) | IEEE-754     | **Default.** Offers high precision at roughly the same speed as `f32` on modern CPUs. |
+### Compound Types
+As a wizard who had spoken the language of the serpent he never know the `compound types` the Rustaceans spoke. This is not common speech within the boundaries of the mage's knowledge. Not even in C, the wisdom wizards mention something like compound types. The book had wrote on a blank page:
+
+```text
+Compound types can group multiple values into one type. Rust has two primitive compound types: tuples and arrays.
+```
+
+The first description appeared on the first page:
+```text
+A tuple is a general way of grouping together a number of values with a variety of types into one compound type. Tuples have a fixed length: Once declared, they cannot grow or shrink in size.
+
+We create a tuple by writing a comma-separated list of values inside parentheses. Each position in the tuple has a type, and the types of the different values in the tuple don’t have to be the same.
+```
+
+And then the book show the signs of a basic casting:
+```rust
+fn main() { let tup: (i32, f64, u8) = (500, 6.4, 1); }
+```
+
+```text
+You wizards can also access a tuple element directly by using a period (`.`) followed by the index of the value you want to access.
+```
+
